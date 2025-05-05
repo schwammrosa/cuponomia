@@ -1,0 +1,110 @@
+.nav-item.nav-sign {
+  position: relative;
+  display: inline-block;
+}
+
+.jewel-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff5a5f;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-user:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-user-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.nav-user-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 8px;
+}
+
+.nav-user-name, .nav-user-cash {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-user-arrow {
+  font-size: 12px;
+}
+
+.subnav {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  z-index: 100;
+  padding: 16px;
+}
+
+.signinCall {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signinCall-text {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.signup-btn {
+  background-color: var(--primary, #ff5a5f);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: var(--primary-dark, #ff3a3f);
+}
+
+.focus-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 50;
+}
