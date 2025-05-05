@@ -1,151 +1,104 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../../context/AppContext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faShoppingBag, 
-  faLaptop, 
-  faTshirt, 
-  faHome, 
-  faUtensils, 
-  faSprayCan, 
-  faRunning, 
-  faPlane, 
-  faHeartbeat, 
-  faGem, 
-  faGlobe 
-} from '@fortawesome/free-solid-svg-icons';
 
 import {
   CategoriesContainer,
-  PageHeader,
-  SearchField,
-  CategoriesGrid,
-  CategoryCard
+  PageTitle,
+  CategorySection,
+  TopCategoriesGrid,
+  CategoryItem,
+  CategoryIcon,
+  CategoryName,
+  PopularStoresSection,
+  StoresGrid,
+  StoreCard
 } from './styles';
 
-// Mapeamento de ícones para categorias
-const categoryIcons = {
-  'all': faShoppingBag,
-  'eletronicos': faLaptop,
-  'moda': faTshirt,
-  'casa': faHome,
-  'alimentos': faUtensils,
-  'beleza': faSprayCan,
-  'esportes': faRunning,
-  'viagens': faPlane,
-  'saude': faHeartbeat,
-  'joias': faGem,
-  'geral': faGlobe
-};
+// Dados das categorias com ícones SVG
+const categoryData = [
+  { id: 'alimentos', name: 'Alimentos e Bebidas', icon: '🍷' },
+  { id: 'animais', name: 'Animais e Pet', icon: '🦴' },
+  { id: 'bebe', name: 'Bebê e Criança', icon: '🧸' },
+  { id: 'eletrodomesticos', name: 'Eletrodomésticos', icon: '📱' },
+  { id: 'esportes', name: 'Esportes e Fitness', icon: '⚽' },
+  { id: 'games', name: 'Games', icon: '🎮' },
+  { id: 'informatica', name: 'Informática', icon: '🚀' },
+  { id: 'livros', name: 'Livros e Revistas', icon: '📚' },
+  { id: 'passagem', name: 'Passagem Aérea', icon: '✈️' },
+  { id: 'tv', name: 'TV', icon: '📺' },
+  { id: 'moda', name: 'Moda e Acessórios', icon: '👕' },
+  { id: 'moveis', name: 'Móveis e Decoração', icon: '🛋️' },
+  { id: 'farmacia', name: 'Farmácia', icon: '💊' },
+  { id: 'cursos', name: 'Cursos e Aulas', icon: '📝' },
+  { id: 'moda-esportiva', name: 'Moda Esportiva', icon: '🏃' },
+  { id: 'perfumes', name: 'Perfumes e Beleza', icon: '🧴' },
+  { id: 'viagem', name: 'Viagem e Turismo', icon: '🏝️' },
+  { id: 'smartphones', name: 'Smartphones', icon: '📱' },
+  { id: 'taxi', name: 'Táxi', icon: '🚕' },
+  { id: 'utilidades', name: 'Utilidades Domésticas', icon: '🧹' }
+];
+
+// Dados das lojas populares
+const popularStores = [
+  { id: 'samsung', name: 'Samsung', logo: '/images/samsung.png' },
+  { id: 'natura', name: 'Natura', logo: '/images/natura-638803271921503623.png' },
+  { id: 'dell', name: 'Dell', logo: '/images/dell-637956577304666141.png' },
+  { id: 'casas-bahia', name: 'Casas Bahia', logo: '/images/casas-bahia-637628912275644345.png' },
+  { id: 'netshoes', name: 'Netshoes', logo: '/images/netshoes-638803272305429697.png' },
+  { id: 'kabum', name: 'KaBuM!', logo: '/images/kabum-637721671567340182.png' },
+  { id: 'aliexpress', name: 'AliExpress', logo: '/images/aliexpress-638803272105563962.png' },
+  { id: 'vivara', name: 'Vivara', logo: '/images/vivara.png' },
+  { id: 'shein', name: 'SHEIN', logo: '/images/shein-637062346874444192.png' },
+  { id: 'magalu', name: 'Magazine Luiza', logo: '/images/magazine-637302245484776317.png' },
+  { id: 'carrefour', name: 'Carrefour', logo: '/images/carrefour-636994872825696000.png' },
+  { id: 'booking', name: 'Booking.com', logo: '/images/bookingcom.png' }
+];
 
 const Categories = () => {
-  const { categories, allCashbacks, allCoupons, featuredStores } = useAppContext();
+  const { featuredStores } = useAppContext();
   const [searchTerm, setSearchTerm] = useState('');
   
-  // Função para filtrar categorias com base no termo de pesquisa
-  const filteredCategories = categories.filter(category => 
-    category.id !== 'all' && // Exclui a categoria "Todas"
+  // Filtrar categorias com base no termo de pesquisa
+  const filteredCategories = categoryData.filter(category => 
     category.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  
-  // Função para obter lojas por categoria
-  const getStoresByCategory = (categoryId) => {
-    return featuredStores.filter(store => store.category === categoryId);
-  };
-  
-  // Função para contar cupons por categoria
-  const getCouponCountByCategory = (categoryId) => {
-    return allCoupons.filter(coupon => coupon.category === categoryId).length;
-  };
-  
-  // Função para contar cashbacks por categoria
-  const getCashbackCountByCategory = (categoryId) => {
-    return allCashbacks.filter(cashback => cashback.category === categoryId).length;
-  };
-  
-  // Função para obter a média de cashback por categoria
-  const getAverageCashbackByCategory = (categoryId) => {
-    const categoryStores = featuredStores.filter(store => store.category === categoryId);
-    if (categoryStores.length === 0) return '0%';
-    
-    // Simplificação: retorna uma faixa de cashback para a categoria
-    return 'até 12%';
-  };
-  
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-  };
   
   return (
     <CategoriesContainer>
       <div className="container">
-        <PageHeader>
-          <h1>Categorias</h1>
-          <p>Encontre as melhores ofertas e cashbacks organizados por categoria</p>
-        </PageHeader>
+        <PageTitle>
+          <h1>Encontre cupons de desconto em nossas principais categorias</h1>
+        </PageTitle>
         
-        <SearchField>
-          <input 
-            type="text" 
-            placeholder="Buscar categorias..." 
-            value={searchTerm}
-            onChange={handleSearch}
-          />
-          <button>🔍</button>
-        </SearchField>
+        <CategorySection>
+          <h2>Top 20 Categorias</h2>
+          
+          <TopCategoriesGrid>
+            {filteredCategories.map(category => (
+              <CategoryItem key={category.id}>
+                <Link to={`/categoria/${category.id}`}>
+                  <CategoryIcon>{category.icon}</CategoryIcon>
+                  <CategoryName>{category.name}</CategoryName>
+                </Link>
+              </CategoryItem>
+            ))}
+          </TopCategoriesGrid>
+        </CategorySection>
         
-        <CategoriesGrid>
-          {filteredCategories.map(category => {
-            const storesByCategory = getStoresByCategory(category.id);
-            const couponCount = getCouponCountByCategory(category.id);
-            const cashbackCount = getCashbackCountByCategory(category.id);
-            const averageCashback = getAverageCashbackByCategory(category.id);
-            
-            return (
-              <CategoryCard key={category.id}>
-                <div className="category-header">
-                  <div className="icon">
-                    <FontAwesomeIcon icon={categoryIcons[category.id] || faShoppingBag} />
-                  </div>
-                  <h2>{category.name}</h2>
-                </div>
-                
-                <div className="category-content">
-                  <div className="stats">
-                    <div className="stat">
-                      <div className="value">{couponCount}</div>
-                      <div className="label">Cupons</div>
-                    </div>
-                    <div className="stat">
-                      <div className="value">{cashbackCount}</div>
-                      <div className="label">Cashbacks</div>
-                    </div>
-                    <div className="stat">
-                      <div className="value">{averageCashback}</div>
-                      <div className="label">Cashback</div>
-                    </div>
-                  </div>
-                  
-                  <div className="stores">
-                    <h3>Lojas em destaque</h3>
-                    <div className="store-list">
-                      {storesByCategory.slice(0, 4).map(store => (
-                        <div className="store-logo" key={store.id}>
-                          <img src={store.logo} alt={store.store} />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="category-footer">
-                  <Link to={`/categoria/${category.id}`}>Ver Ofertas</Link>
-                </div>
-              </CategoryCard>
-            );
-          })}
-        </CategoriesGrid>
+        <PopularStoresSection>
+          <h2>Lojas mais populares</h2>
+          
+          <StoresGrid>
+            {popularStores.map(store => (
+              <StoreCard key={store.id}>
+                <Link to={`/loja/${store.id}`}>
+                  <img src={store.logo} alt={store.name} />
+                </Link>
+              </StoreCard>
+            ))}
+          </StoresGrid>
+        </PopularStoresSection>
       </div>
     </CategoriesContainer>
   );

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const CategoriesContainer = styled.div`
   padding: 2rem 0 4rem;
+  background-color: #f9f9f9;
   
   .container {
     max-width: 1200px;
@@ -14,185 +15,143 @@ export const CategoriesContainer = styled.div`
   }
 `;
 
-export const PageHeader = styled.div`
-  text-align: center;
+export const PageTitle = styled.div`
   margin-bottom: 2rem;
   
   h1 {
-    color: var(--primary);
-    font-size: 2.5rem;
+    color: #333;
+    font-size: 1.75rem;
+    font-weight: 600;
     margin-bottom: 1rem;
-    position: relative;
-    display: inline-block;
-    
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background-color: var(--primary);
-    }
-  }
-  
-  p {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 700px;
-    margin: 0 auto;
-    margin-top: 1.5rem;
   }
   
   @media (max-width: 768px) {
-    margin-bottom: 1.5rem;
-    
     h1 {
-      font-size: 1.8rem;
-    }
-    
-    p {
-      font-size: 1rem;
-      margin-top: 1.2rem;
+      font-size: 1.5rem;
     }
   }
 `;
 
-export const CategoriesGrid = styled.div`
+export const CategorySection = styled.section`
+  margin-bottom: 3rem;
+  
+  h2 {
+    color: #555;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+`;
+
+export const TopCategoriesGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
   
   @media (max-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     grid-template-columns: 1fr;
   }
 `;
 
-export const CategoryCard = styled.div`
+export const CategoryItem = styled.div`
   background-color: white;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  transition: all 0.2s ease;
+  
+  a {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: #333;
+  }
   
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .category-header {
-    background-color: var(--primary);
-    padding: 1.5rem;
-    text-align: center;
-    
-    h2 {
-      color: white;
-      font-size: 1.5rem;
-      margin: 0;
-    }
-    
-    .icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.8rem;
-      color: white;
-    }
-  }
-  
-  .category-content {
-    padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    
-    .stats {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1.5rem;
-      
-      .stat {
-        text-align: center;
-        flex: 1;
-        
-        .value {
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--primary);
-          margin-bottom: 0.3rem;
-        }
-        
-        .label {
-          font-size: 0.9rem;
-          color: #666;
-        }
-      }
-    }
-    
-    .stores {
-      margin-bottom: 1.5rem;
-      
-      h3 {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-        color: #333;
-      }
-      
-      .store-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        
-        .store-logo {
-          width: 60px;
-          height: 60px;
-          border-radius: 8px;
-          border: 1px solid #eee;
-          padding: 0.5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          
-          img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-          }
-        }
-      }
-    }
-  }
-  
-  .category-footer {
-    padding: 1rem 1.5rem;
-    background-color: #f9f9f9;
-    text-align: center;
-    
-    a {
-      display: inline-block;
-      padding: 0.7rem 1.5rem;
-      background-color: var(--primary);
-      color: white;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        background-color: #e64a19;
-        transform: translateY(-2px);
-      }
-    }
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 `;
 
+export const CategoryIcon = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+  font-size: 1.25rem;
+  color: #673ab7;
+`;
+
+export const CategoryName = styled.span`
+  font-size: 0.9rem;
+  font-weight: 500;
+`;
+
+export const PopularStoresSection = styled.section`
+  margin-top: 3rem;
+  
+  h2 {
+    color: #555;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+`;
+
+export const StoresGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
+export const StoreCard = styled.div`
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  img {
+    max-width: 100%;
+    max-height: 40px;
+    object-fit: contain;
+  }
+  
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+`;
 export const SearchField = styled.div`
   display: flex;
   max-width: 500px;
