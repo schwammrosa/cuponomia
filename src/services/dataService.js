@@ -99,7 +99,7 @@ export const bestCashbacks = [
     store: 'Booking',
     cashback: '4%',
     coupons: 15,
-    logo: '/images/booking.png',
+    logo: '/images/bookingcom.png',
     category: 'viagens'
   },
   {
@@ -139,7 +139,7 @@ export const bestCashbacks = [
     store: 'Mercado Livre',
     cashback: '1%',
     coupons: 12,
-    logo: '/images/mercadolivre.png',
+    logo: '/images/mercado-livre.png',
     category: 'geral'
   }
 ];
@@ -264,7 +264,7 @@ export const topCoupons = [
     store: 'Mercado Livre',
     title: 'Frete Grátis em compras acima de R$79',
     cashback: '1%',
-    logo: '/images/mercadolivre.png',
+    logo: '/images/mercado-livre.png',
     type: 'discount',
     details: 'Válido apenas para produtos com selo Mercado Livre.',
     verification: '1 dia atrás',
@@ -288,7 +288,7 @@ export const topCoupons = [
     store: 'Booking',
     title: 'Ganhe 15% OFF na sua próxima hospedagem',
     cashback: '4%',
-    logo: '/images/booking.png',
+    logo: '/images/bookingcom.png',
     type: 'code',
     code: 'BOOKING15',
     details: 'Válido para reservas feitas até o final do mês.',
@@ -385,7 +385,7 @@ export const stores = [
     store: 'Mercado Livre',
     cashback: '1%',
     coupons: 12,
-    logo: '/images/mercadolivre.png',
+    logo: '/images/mercado-livre.png',
     category: 'geral'
   },
   {
@@ -393,7 +393,7 @@ export const stores = [
     store: 'Booking',
     cashback: '4%',
     coupons: 15,
-    logo: '/images/booking.png',
+    logo: '/images/bookingcom.png',
     category: 'viagens'
   }
 ];
