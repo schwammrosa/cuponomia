@@ -27,7 +27,7 @@ const Header = () => {
       <div className="container">
         <Logo>
           <Link to="/">
-            <h1>CUPONOMIA</h1>
+            <h1 data-component-name="Header">NomeSite</h1>
           </Link>
         </Logo>
 

@@ -9,8 +9,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   :root {
-    --primary: #6a3796;
-    --secondary: #8946c8;
+    --primary: #1565c0;
+    --secondary: #2196f3;
     --success: #4CAF50;
     --danger: #F44336;
     --warning: #FFC107;
@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     --dark: #212121;
     --light: #F5F5F5;
     --gray: #9E9E9E;
-    --purple-light: #f5f0fa;
+    --blue-light: #e3f2fd;
   }
 
   body {

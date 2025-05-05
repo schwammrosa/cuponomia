@@ -123,9 +123,9 @@ export const SocialIcon = styled.div`
   }
   
   &:hover {
-    background: linear-gradient(145deg, #673ab7, #9c27b0);
+    background: linear-gradient(145deg, #1565c0, #2196f3);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(103, 58, 183, 0.3);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
     
     svg {
       transform: scale(1.2);
