@@ -10,7 +10,7 @@ export const bestCashbacks = [
     store: 'Casas Bahia',
     cashback: 'até 12%',
     coupons: 40,
-    logo: '/images/casas-bahia-637628912275644345.png',
+    logo: '/images/casas-bahia.png',
     label: 'Super Cashback',
     category: 'eletronicos'
   },
@@ -28,7 +28,7 @@ export const bestCashbacks = [
     store: 'Magalu',
     cashback: 'até 10%',
     coupons: 45,
-    logo: '/images/magazine-637302245484776317.png',
+    logo: '/images/magazine.png',
     label: 'Super Cashback',
     category: 'eletronicos'
   },
@@ -56,7 +56,7 @@ export const bestCashbacks = [
     store: 'Dell',
     cashback: 'até 5%',
     coupons: 20,
-    logo: '/images/dell-637956577304666141.png',
+    logo: '/images/dell.png',
     label: 'Super Cashback',
     category: 'eletronicos'
   },
@@ -65,7 +65,7 @@ export const bestCashbacks = [
     store: 'Natura',
     cashback: '12%',
     coupons: 30,
-    logo: '/images/natura-638803271921503623.png',
+    logo: '/images/natura.png',
     label: 'Super Cashback',
     category: 'beleza'
   },
@@ -74,7 +74,7 @@ export const bestCashbacks = [
     store: 'Netshoes',
     cashback: '8%',
     coupons: 25,
-    logo: '/images/netshoes-638803272305429697.png',
+    logo: '/images/netshoes.png',
     label: 'Super Cashback',
     category: 'moda'
   },
@@ -151,7 +151,7 @@ export const topCoupons = [
     store: 'Adidas',
     title: 'Desconto imperdível de 15% em adidas',
     cashback: '4%',
-    logo: '/images/adidas-638532841208099781.png',
+    logo: '/images/Adidas.png',
     type: 'discount',
     details: 'Válido para produtos selecionados no site oficial da Adidas Brasil.',
     verification: '2 dias atrás',
@@ -176,7 +176,7 @@ export const topCoupons = [
     store: 'LG',
     title: 'Sua chance de economizar 10% com o cupom LG exclusivo',
     cashback: '1%',
-    logo: '/images/lg-638802520736776263.png',
+    logo: '/images/lg.png',
     type: 'code',
     code: 'LG10',
     details: 'Válido para a linha de eletrodomésticos selecionados.',
@@ -189,7 +189,7 @@ export const topCoupons = [
     store: 'Casas Bahia',
     title: 'Cupom Casas Bahia exclusivo: Desconto de até 25% em suas compras',
     cashback: 'até 12%',
-    logo: '/images/casas-bahia-637628912275644345.png',
+    logo: '/images/casas-bahia.png',
     type: 'discount',
     details: 'Promoção válida para produtos da linha marrom e eletrodomésticos.',
     verification: '1 dia atrás',
@@ -201,7 +201,7 @@ export const topCoupons = [
     store: 'Dell',
     title: 'Notebook Dell com 10% OFF usando o cupom exclusivo',
     cashback: '5%',
-    logo: '/images/dell-637956577304666141.png',
+    logo: '/images/dell.png',
     type: 'code',
     code: 'DELL10',
     details: 'Válido para notebooks da linha Inspiron e XPS.',
@@ -305,7 +305,7 @@ export const stores = [
     store: 'Samsung',
     cashback: 'até 15%',
     coupons: 24,
-    logo: '/images/samsung-638802455508442580.png',
+    logo: '/images/samsung.png',
     category: 'eletronicos'
   },
   {
@@ -313,7 +313,7 @@ export const stores = [
     store: 'Natura',
     cashback: '12%',
     coupons: 20,
-    logo: '/images/natura-638803271921503623.png',
+    logo: '/images/natura.png',
     category: 'beleza'
   },
   {
@@ -321,7 +321,7 @@ export const stores = [
     store: 'Dell',
     cashback: 'até 5%',
     coupons: 9,
-    logo: '/images/dell-637956577304666141.png',
+    logo: '/images/dell.png',
     category: 'eletronicos'
   },
   {
@@ -329,7 +329,7 @@ export const stores = [
     store: 'Casas Bahia',
     cashback: 'até 11%',
     coupons: 45,
-    logo: '/images/casas-bahia-637628912275644345.png',
+    logo: '/images/casas-bahia.png',
     category: 'eletronicos'
   },
   {
@@ -337,7 +337,7 @@ export const stores = [
     store: 'Netshoes',
     cashback: '8%',
     coupons: 60,
-    logo: '/images/netshoes-638803272305429697.png',
+    logo: '/images/netshoes.png',
     category: 'moda'
   },
   {
@@ -345,7 +345,7 @@ export const stores = [
     store: 'Magazine Luiza',
     cashback: '7.1%',
     coupons: 35,
-    logo: '/images/magazine-637302245484776317.png',
+    logo: '/images/magazine.png',
     category: 'eletronicos'
   },
   {

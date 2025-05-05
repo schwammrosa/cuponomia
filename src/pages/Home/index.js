@@ -25,12 +25,12 @@ import BestCashbacksCarousel from '../../components/BestCashbacksCarousel';
 const Home = () => {
   // Dados simulados para lojas em destaque
   const featuredStores = [
-    { id: 1, name: 'Samsung', cashback: 'até 15%', couponCount: '24', logo: '/images/samsung-638802455508442580.png' },
-    { id: 2, name: 'Natura', cashback: '12%', couponCount: '20', logo: '/images/natura-638803271921503623.png' },
-    { id: 3, name: 'Dell', cashback: 'até 5%', couponCount: '9', logo: '/images/dell-637956577304666141.png' },
-    { id: 4, name: 'Casas Bahia', cashback: 'até 11%', couponCount: '45', logo: '/images/casas-bahia-637628912275644345.png' },
-    { id: 5, name: 'Netshoes', cashback: '8%', couponCount: '60', logo: '/images/netshoes-638803272305429697.png' },
-    { id: 6, name: 'Magazine Luiza', cashback: '7.1%', couponCount: '35', logo: '/images/magazine-637302245484776317.png' }
+    { id: 1, name: 'Samsung', cashback: 'até 15%', couponCount: '24', logo: '/images/samsung.png' },
+    { id: 2, name: 'Natura', cashback: '12%', couponCount: '20', logo: '/images/natura.png' },
+    { id: 3, name: 'Dell', cashback: 'até 5%', couponCount: '9', logo: '/images/dell.png' },
+    { id: 4, name: 'Casas Bahia', cashback: 'até 11%', couponCount: '45', logo: '/images/casas-bahia.png' },
+    { id: 5, name: 'Netshoes', cashback: '8%', couponCount: '60', logo: '/images/netshoes.png' },
+    { id: 6, name: 'Magazine Luiza', cashback: '7.1%', couponCount: '35', logo: '/images/magazine.png' }
   ];
 
   // Dados simulados para cupons em destaque
@@ -45,7 +45,7 @@ const Home = () => {
       usageCount: '20',
       code: '',
       type: 'discount',
-      logo: '/images/magazine-637302245484776317.png' 
+      logo: '/images/magazine.png' 
     },
     { 
       id: 2, 
@@ -57,7 +57,7 @@ const Home = () => {
       usageCount: '50',
       code: '511',
       type: 'code',
-      logo: '/images/shein-637062346874444192.png' 
+      logo: '/images/shein.png' 
     },
     { 
       id: 3, 
@@ -69,7 +69,7 @@ const Home = () => {
       usageCount: '4',
       code: '',
       type: 'discount',
-      logo: '/images/kabum-637721671567340182.png' 
+      logo: '/images/kabum.png' 
     },
     { 
       id: 4, 
@@ -81,7 +81,7 @@ const Home = () => {
       usageCount: '8',
       code: 'X10',
       type: 'code',
-      logo: '/images/fast-shop-637969410020597581.png' 
+      logo: '/images/fast-shop.png' 
     }
   ];
 

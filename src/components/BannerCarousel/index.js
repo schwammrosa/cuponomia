@@ -26,21 +26,21 @@ const BannerCarousel = () => {
       id: 1,
       title: "Ofertas Exclusivas",
       description: "Descontos imperdíveis em produtos selecionados!",
-      image: "/images/Desktop-image-638811253151504270.png",
+      image: "/images/bane1.png",
       backgroundColor: "#6a3796"
     },
     {
       id: 2,
       title: "Especial Tecnologia",
       description: "Os melhores descontos em smartphones e eletrônicos",
-      image: "/images/Desktop-image-638812035299902120.png",
+      image: "/images/bane2.png",
       backgroundColor: "#6a3796"
     },
     {
       id: 3,
       title: "Melhores Ofertas",
       description: "Aproveite as promoções de cashback",
-      image: "/images/Desktop-image-638815130571939497.png",
+      image: "/images/Bane3.png",
       backgroundColor: "#6a3796"
     }
   ];

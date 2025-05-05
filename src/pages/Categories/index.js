@@ -42,16 +42,16 @@ const categoryData = [
 // Dados das lojas populares
 const popularStores = [
   { id: 'samsung', name: 'Samsung', logo: '/images/samsung.png' },
-  { id: 'natura', name: 'Natura', logo: '/images/natura-638803271921503623.png' },
-  { id: 'dell', name: 'Dell', logo: '/images/dell-637956577304666141.png' },
-  { id: 'casas-bahia', name: 'Casas Bahia', logo: '/images/casas-bahia-637628912275644345.png' },
-  { id: 'netshoes', name: 'Netshoes', logo: '/images/netshoes-638803272305429697.png' },
-  { id: 'kabum', name: 'KaBuM!', logo: '/images/kabum-637721671567340182.png' },
-  { id: 'aliexpress', name: 'AliExpress', logo: '/images/aliexpress-638803272105563962.png' },
+  { id: 'natura', name: 'Natura', logo: '/images/natura.png' },
+  { id: 'dell', name: 'Dell', logo: '/images/dell.png' },
+  { id: 'casas-bahia', name: 'Casas Bahia', logo: '/images/casas-bahia.png' },
+  { id: 'netshoes', name: 'Netshoes', logo: '/images/netshoes.png' },
+  { id: 'kabum', name: 'KaBuM!', logo: '/images/kabum.png' },
+  { id: 'aliexpress', name: 'AliExpress', logo: '/images/Aliexpress.png' },
   { id: 'vivara', name: 'Vivara', logo: '/images/vivara.png' },
-  { id: 'shein', name: 'SHEIN', logo: '/images/shein-637062346874444192.png' },
-  { id: 'magalu', name: 'Magazine Luiza', logo: '/images/magazine-637302245484776317.png' },
-  { id: 'carrefour', name: 'Carrefour', logo: '/images/carrefour-636994872825696000.png' },
+  { id: 'shein', name: 'SHEIN', logo: '/images/shein.png' },
+  { id: 'magalu', name: 'Magazine Luiza', logo: '/images/magazine.png' },
+  { id: 'carrefour', name: 'Carrefour', logo: '/images/carrefour.png' },
   { id: 'booking', name: 'Booking.com', logo: '/images/bookingcom.png' }
 ];
 
