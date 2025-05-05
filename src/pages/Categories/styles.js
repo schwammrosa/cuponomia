@@ -87,7 +87,7 @@ export const CategoryIcon = styled.span`
   height: 36px;
   margin-right: 10px;
   font-size: 1.25rem;
-  color: #673ab7;
+  color: #1565c0;
 `;
 
 export const CategoryName = styled.span`
