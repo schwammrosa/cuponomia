@@ -99,29 +99,43 @@ export const SocialLinks = styled.div`
 `;
 
 export const SocialIcon = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background-color: #424242;
+  background-color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  margin-right: 12px;
   
   a {
     color: white;
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  svg {
+    transition: all 0.3s ease;
   }
   
   &:hover {
-    background-color: var(--primary);
+    background: linear-gradient(145deg, #673ab7, #9c27b0);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(103, 58, 183, 0.3);
+    
+    svg {
+      transform: scale(1.2);
+    }
   }
   
   @media (max-width: 576px) {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
   }
 `;
 
